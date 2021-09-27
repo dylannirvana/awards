@@ -10,12 +10,13 @@
 </picture> -->
 
 <!-- THIS IS STANDARD SRCSET/SIZES IMPLEMENTATION. NICE -->
-<!-- <img srcset="logo480.avifs 480w,
-             logo800.avifs 800w"
+<!-- <img srcset="assets/logo480.avifs 480w,
+             assets/logo800.avifs 800w"
      sizes="(max-width: 800px) 480px,
             800px"
      src="logo800.jpg"
      alt="BMI Awards"> -->
+     <!-- THIS SYNTAX IS NOT WORKING -->
 
 <!-- COMPENSATING FOR PIXEL DENSITY -->
 <!-- <img srcset="elva-fairy-320w.jpg,
@@ -25,11 +26,12 @@
      alt="Elva dressed as a fairy"> -->
 
 <!-- SAME BUT DIFFERENT SYNTAX W PICTURE/SOURCE -->
-<!-- <picture>
-  <source media="(max-width: 799px)" srcset="elva-480w-close-portrait.jpg">
-  <source media="(min-width: 800px)" srcset="elva-800w.jpg">
-  <img src="elva-800w.jpg" alt="Chris standing up holding his daughter Elva">
+<!-- <picture class="logo">
+  <source media="(max-width: 600px)" srcset="assets/logo480.webp">
+  <source media="(min-width: 601px)" srcset="assets/logo800.webp">
+  <img src="assets/logo800.jpg" alt="BMI Awards London">
 </picture> -->
+<!-- THIS WORKS -->
 
 <!-- BY THE BOOK MEDIA CHOOSER -->
 <!-- <picture>
@@ -42,10 +44,18 @@
 
 <!-- OUR LITTLE COMBINATION OF MEDIA CHOOSER AND RESOLUTION SWITCHING -->
 <picture class="logo" >
-    <source type="image/avif" srcset="assets/logo480.avifs 480w, assets/logo800.avifs 800w" sizes="(max-width: 600px) 480px, 800px">
-    <!-- <source type="image/avif" srcset="assets/logo480.avifs"> -->
-    <source type="image/webp" srcset="assets/logo480.webp 480w, assets/logo800.webp 800w" sizes="(max-width: 600px) 480px, 800px">
-    <!-- <source type="image/webp" srcset="assets/logo480.webp"> -->
-    <img src="assets/logo800.jpg" alt="london awards">
+  <!-- COMBINES BOTH #1 -->
+    <!-- <source type="image/avif" srcset="assets/logo480.avifs 480w, assets/logo800.avifs 800w" sizes="(max-width: 600px) 480px, 800px">
+    <source type="image/webp" srcset="assets/logo480.webp 480w, assets/logo800.webp 800w" sizes="(max-width: 600px) 480px, 800px"> -->
+    <!-- <img src="assets/logo800.jpg" alt="london awards"> -->
+    <!-- FAILS -->
+
+    <!-- #2 -->
+  <source media="(max-width: 600px)" type="image/avif" srcset="assets/logo480.avifs">
+  <source media="(max-width: 600px)" type="image/webp" srcset="assets/logo480.webp">
+  <source media="(min-width: 601px)" type="image/avif" srcset="assets/logo800.avifs">
+  <source media="(min-width: 601px)" type="image/webp" srcset="assets/logo800.webp">
+  <img src="assets/logo800.jpg" alt="BMI Awards London">
+  <!-- Resolution switcher works in localhost but media chooser MUST be tested in browserstack to see if it works! -->
    
 </picture>
