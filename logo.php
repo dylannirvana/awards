@@ -34,7 +34,7 @@
 <!-- BY THE BOOK MEDIA CHOOSER -->
 <!-- <picture>
   <source type="image/svg+xml" srcset="pyramid.svg">
-  <source type="image/webp" srcset="pyramid.webp">
+  <source timage/webp" srcset="pyramid.webp">
   <img src="pyramid.png" alt="regular pyramid built from four equilateral triangles">
 </picture> -->
 
