@@ -176,10 +176,10 @@ Creation date: 03/17/2021
 
 <!-- START test ====================================================================================== -->
                           <!-- Roll your own -->
-                        <?php include("logo.php"); ?>
+                        <?php // include("logo.php"); ?>
 
                         <!-- Cloudinary -->
-                        <?php // include("cloudinary.php"); ?>
+                        <?php include("cloudinary.php"); ?>
 
                             <!-- <picture class="logo">
                                 <source srcset="https://cdn.bcms.app/uploads/rb21_bmi_eventlogo_bf3bc2bc96.avif" type="image/avif">
