@@ -168,6 +168,7 @@ Creation date: 03/17/2021
 <!-- START test ====================================================================================== -->
                           <!-- Roll your own -->
                         <?php include("logo.php"); ?>
+                        srcset
                         <!-- Cloudinary -->
                         <?php // include("cloudinary.php"); ?>
 
